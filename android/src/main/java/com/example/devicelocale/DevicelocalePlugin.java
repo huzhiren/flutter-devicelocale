@@ -41,7 +41,7 @@ public class DevicelocalePlugin implements MethodCallHandler {
       }
     }
     catch (Throwable t) {
-      final language = Locale.getDefault().getDisplayLanguage();
+      Locale language = Locale.getDefault();
       result.add(language.toString());
     }
     return result;
